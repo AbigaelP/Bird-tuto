@@ -21,6 +21,14 @@ public class Player : MonoBehaviour
         InvokeRepeating(nameof(AnimateSprite), 0.15f, 0.15f);
     }
 
+    private void OnEnable()
+    {
+        Vector3 position = transform.position;
+        position.y = 0f;
+        transform.position = position;
+        direction = Vector3.zero;
+    }
+
     private void Update()
     {
         //We get the user input and set the key to make the bird bounce to the space bar (or a mouse click)
@@ -55,5 +63,17 @@ public class Player : MonoBehaviour
         }
 
         spriteRenderer.sprite = sprites[spriteIndex];
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Obstacle")
+        {
+            FindObjectOfType<GameManager>().GameOver();
+        }
+        else if (other.gameObject.tag == "Scoring")
+        {
+            FindObjectOfType<GameManager>().IncreaseScore();
+        }
     }
 }
