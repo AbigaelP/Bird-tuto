@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.DeviceSimulation;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -39,7 +35,7 @@ public class Player : MonoBehaviour
         {
             Touch touch = Input.GetTouch(0);
 
-            if (touch.phase == UnityEngine.TouchPhase.Began)
+            if (touch.phase == TouchPhase.Began)
             {
                 direction = Vector3.up * strength;
             }
