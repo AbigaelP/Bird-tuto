@@ -19,6 +19,13 @@ public class Player : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
+    private void OnEnable()
+    {
+        Vector3 position = transform.position;
+        position.y = 0f;
+        transform.position = position;
+        direction = Vector3.zero;
+    }
     private void Start()
     {
         InvokeRepeating(nameof(AnimateSprite), 0.15f, 0.15f);
