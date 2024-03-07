@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
 
         playButton.SetActive(false);
         gameOver.SetActive(false);
+        
 
         Time.timeScale = 1f;
         player.enabled = true;
@@ -45,6 +46,7 @@ public class GameManager : MonoBehaviour
     {
         gameOver.SetActive(true);
         playButton.SetActive(true);
+        
 
         Pause();
     }
