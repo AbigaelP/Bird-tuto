@@ -4,11 +4,21 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public Player player;
+
+    //score globale
+    private int score;
     public Text scoreText;
+
+    //score des pieces
+    public Text scoreCoinText;
+    private int scoreCoin;
+    private const int pointCoinsDefault = 5;
+
+    //boutons
     public GameObject playButton;
     public GameObject gameOver;
 
-    private int score;
+
 
     private void Awake()
     {
@@ -35,6 +45,13 @@ public class GameManager : MonoBehaviour
         {
             Destroy(pipes[i].gameObject);
         }
+
+        Coins[] coins = FindObjectsOfType<Coins>();
+
+        for (int i = 0; i < coins.Length; i++)
+        {
+            Destroy(coins[i].gameObject);
+        }
     }
 
     public void Pause()
@@ -51,10 +68,16 @@ public class GameManager : MonoBehaviour
         Pause();
     }
 
-    public void IncreaseScore()
+    public void IncreaseScore(int val)
     {
-        score ++;
+        score += val;
         scoreText.text = score.ToString();
     }
 
+    public void IncreaseScoreCoin()
+    {
+        scoreCoin++;
+        scoreCoinText.text = scoreCoin.ToString();
+        IncreaseScore(pointCoinsDefault);
+    }
 }

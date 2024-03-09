@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 335591269917143287}
   m_Layer: 0
   m_Name: Coin
-  m_TagString: Player
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 9212596848226224150}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -143,3 +143,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1881f156c2211bf45855c132706045b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 10

@@ -2,12 +2,29 @@ using UnityEngine;
 
 public class Coins : MonoBehaviour
 {
-    public static int totalCoins = 0;
+    private float speed = 1f;
+
+    private float leftEdge;
+
+    private void Start()
+    {
+        leftEdge = Camera.main.ScreenToWorldPoint(Vector3.zero).x - 1f;
+    }
 
     void Awake()
     {
         //Make Collider2D as trigger 
         GetComponent<Collider2D>().isTrigger = true;
+    }
+
+    private void Update()
+    {
+        transform.position += Vector3.left * speed * Time.deltaTime;
+
+        if (transform.position.x < leftEdge)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D c2d)
@@ -16,9 +33,8 @@ public class Coins : MonoBehaviour
         if (c2d.CompareTag("Player"))
         {
             //Add coin to counter
-            totalCoins++;
-            //Test: Print total number of coins
-            Debug.Log("You currently have " + Coins.totalCoins + " Coins.");
+            FindObjectOfType<GameManager>().IncreaseScoreCoin();
+ 
             //Destroy coin
             Destroy(gameObject);
         }

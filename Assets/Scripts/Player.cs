@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
 
     public float gravity = -9.8f;
 
-    public float strength = 5f;
+    public float strength = 17f;
 
     private void Awake()
     {
@@ -70,7 +70,7 @@ public class Player : MonoBehaviour
             FindObjectOfType<GameManager>().GameOver();
         }else if (other.gameObject.tag == "Scoring")
         {
-            FindObjectOfType<GameManager>().IncreaseScore();
+            FindObjectOfType<GameManager>().IncreaseScore(1);
         }
     }
 }
