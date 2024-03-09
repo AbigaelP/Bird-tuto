@@ -7,27 +7,44 @@ public class Setting : MonoBehaviour
 
     public void level1()
     {
-        Setting.difficultyLevel = 1;
+        difficultyLevel = 1;
+        setDifficulty();
         SceneManager.LoadScene("bby");
     }
     public void level2()
     {
-        Setting.difficultyLevel = 2;
+        difficultyLevel = 2;
+        setDifficulty();
         SceneManager.LoadScene("bby");
     }
     public void level3()
     {
-        Setting.difficultyLevel = 3;
+        difficultyLevel = 3;
+        setDifficulty();
         SceneManager.LoadScene("bby");
     }
     public void level4()
     {
-        Setting.difficultyLevel = 4;
+        difficultyLevel = 4;
+        setDifficulty();
         SceneManager.LoadScene("bby");
     }
     public void level5()
     {
-        Setting.difficultyLevel = 5;
+        difficultyLevel = 5;
+        setDifficulty();
         SceneManager.LoadScene("bby");
+    }
+    public void level6()
+    {
+        difficultyLevel = 6;
+        setDifficulty();
+        SceneManager.LoadScene("bby");
+    }
+
+    private void setDifficulty()
+    {
+        Spawner.setDifficulty(Setting.difficultyLevel);
+        Coins.setDifficulty(Setting.difficultyLevel);
     }
 }

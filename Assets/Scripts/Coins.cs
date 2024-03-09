@@ -1,10 +1,28 @@
+using UnityEditor;
+using UnityEditor.U2D.Sprites;
 using UnityEngine;
 
 public class Coins : MonoBehaviour
 {
-    private float speed = 1f;
+    public static int score = 0;
+    private static float speed = 5f;
 
     private float leftEdge;
+
+    public static void setDifficulty (int difficulty)
+    {
+        speed = 5f;
+        switch (difficulty)
+        {
+            case 3:
+            case 6:
+                speed = 10f;
+                break;
+            case 4:
+                speed = 1f;
+                break;
+        }
+    }
 
     private void Start()
     {
@@ -32,8 +50,9 @@ public class Coins : MonoBehaviour
         //Destroy the coin if Object tagged Player comes in contact with it
         if (c2d.CompareTag("Player"))
         {
+            score++;
             //Add coin to counter
-            FindObjectOfType<GameManager>().IncreaseScoreCoin();
+            FindObjectOfType<GameManager>().IncreaseScoreCoin(score);
  
             //Destroy coin
             Destroy(gameObject);

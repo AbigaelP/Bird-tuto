@@ -12,19 +12,19 @@ public class GameManager : MonoBehaviour
 
     //score des pieces
     public Text scoreCoinText;
-    private int scoreCoin;
     private const int pointCoinsDefault = 5;
 
     //boutons
     public GameObject playButton;
     public GameObject gameOver;
+    public GameObject settingButton;
 
 
 
     private void Awake()
     {
         Application.targetFrameRate = 60;
-
+        scoreCoinText.text = Coins.score.ToString();
         Pause();
     }
 
@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
 
         playButton.SetActive(false);
         gameOver.SetActive(false);
+        settingButton.SetActive(false);
         
 
         Time.timeScale = 1f;
@@ -59,14 +60,15 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0f;
         player.enabled = false;
+        settingButton.SetActive(true);
+        gameOver.SetActive(false);
     }
     public void GameOver()
     {
+        Pause();
         gameOver.SetActive(true);
         playButton.SetActive(true);
         
-
-        Pause();
     }
 
     public void IncreaseScore(int val)
@@ -75,10 +77,9 @@ public class GameManager : MonoBehaviour
         scoreText.text = score.ToString();
     }
 
-    public void IncreaseScoreCoin()
+    public void IncreaseScoreCoin(int score)
     {
-        scoreCoin++;
-        scoreCoinText.text = scoreCoin.ToString();
+        scoreCoinText.text = score.ToString();
         IncreaseScore(pointCoinsDefault);
     }
 

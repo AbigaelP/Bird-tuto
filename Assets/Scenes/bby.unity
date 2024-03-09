@@ -290,6 +290,7 @@ MonoBehaviour:
   scoreCoinText: {fileID: 942137481}
   playButton: {fileID: 1216963877}
   gameOver: {fileID: 901664460}
+  settingButton: {fileID: 182027090}
 --- !u!4 &278808227
 Transform:
   m_ObjectHideFlags: 0
