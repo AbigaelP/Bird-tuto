@@ -1,18 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class Setting : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public static int difficultyLevel = 1;
 
-    // Update is called once per frame
-    void Update()
+    private void level1()
     {
-        
+        Setting.difficultyLevel = 1;
+        SceneManager.LoadScene("bby");
+    }
+    private void level2()
+    {
+        Setting.difficultyLevel = 2;
+        SceneManager.LoadScene("bby");
+    }
+    private void level3()
+    {
+        Setting.difficultyLevel = 3;
+        SceneManager.LoadScene("bby");
+    }
+    private void level4()
+    {
+        Setting.difficultyLevel = 4;
+        SceneManager.LoadScene("bby");
+    }
+    private void level5()
+    {
+        Setting.difficultyLevel = 5;
+        SceneManager.LoadScene("bby");
     }
 }
