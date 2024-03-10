@@ -59,7 +59,7 @@ public class Spawner : MonoBehaviour
 
         float nextPipes = 1f;
         float nextCoin = 2f;
-
+        float nextSeed = 1f;
 
         if(randomSpawning)
         {
@@ -83,7 +83,8 @@ public class Spawner : MonoBehaviour
             counter++;
             if (counter >= nextSeedA)
             {
-                Invoke(nameof(SpawnSeeds), 1);
+                nextSeed = Random.Range(1f, 3f);
+                Invoke(nameof(SpawnSeeds), nextPipes/nextSeed);
                 counter = 0;
                 nextSeedA = Random.Range(4, 8);
             }

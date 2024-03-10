@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Seeds : MonoBehaviour
 {
-    public static int scoreSeed = 0;
+   
     private static float speed = 5f;
 
     private float leftEdge;

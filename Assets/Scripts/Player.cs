@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
 
     private float strength = 8f;
 
-    public static int scoreSeed = 0;
+    private int scoreSeed = 0;
 
     private void Awake()
     {
@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
         position.y = 0f;
         transform.position = position;
         direction = Vector3.zero;
+        scoreSeed = 0;
     }
     private void Start()
     {

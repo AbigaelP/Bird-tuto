@@ -36,6 +36,8 @@ public class GameManager : MonoBehaviour
         score = 0;
         scoreText.text = score.ToString();
 
+        scoreSeedText.text = score.ToString();
+
         playButton.SetActive(false);
         gameOver.SetActive(false);
         settingButton.SetActive(false);
