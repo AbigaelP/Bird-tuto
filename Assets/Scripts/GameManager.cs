@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
     public Text scoreCoinText;
     private const int pointCoinsDefault = 5;
 
+    //score des graines
+    public Text scoreSeedText;
+
     //boutons
     public GameObject playButton;
     public GameObject gameOver;
@@ -54,6 +57,13 @@ public class GameManager : MonoBehaviour
         {
             Destroy(coins[i].gameObject);
         }
+
+        Seeds[] seeds = FindObjectsOfType<Seeds>();
+
+        for (int i = 0; i < seeds.Length; i++)
+        {
+            Destroy(seeds[i].gameObject);
+        }
     }
 
     public void Pause()
@@ -81,6 +91,11 @@ public class GameManager : MonoBehaviour
     {
         scoreCoinText.text = score.ToString();
         IncreaseScore(pointCoinsDefault);
+    }
+
+    public void IncreaseScoreSeed(int number)
+    {
+        scoreSeedText.text = number.ToString();
     }
 
     public void OpenSetting()

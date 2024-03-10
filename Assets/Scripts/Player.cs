@@ -10,9 +10,11 @@ public class Player : MonoBehaviour
 
     private Vector3 direction;
 
-    public float gravity = -9.8f;
+    private float gravity = -22f;
 
-    public float strength = 17f;
+    private float strength = 5f;
+
+    public static int scoreSeed = 0;
 
     private void Awake()
     {
@@ -63,14 +65,22 @@ public class Player : MonoBehaviour
         spriteRenderer.sprite = sprites[spriteIndex];
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D c2d)
     {
-        if (other.gameObject.tag == "Obstacle")
+        if (c2d.gameObject.tag == "Obstacle")
         {
             FindObjectOfType<GameManager>().GameOver();
-        }else if (other.gameObject.tag == "Scoring")
+        }else if (c2d.gameObject.tag == "Scoring")
         {
             FindObjectOfType<GameManager>().IncreaseScore(1);
+        }
+        else if (c2d.gameObject.tag == "Seed")
+        {
+            scoreSeed ++;
+            FindObjectOfType<GameManager>().IncreaseScoreSeed(scoreSeed);
+
+            Destroy(c2d.gameObject);
+            
         }
     }
 }
