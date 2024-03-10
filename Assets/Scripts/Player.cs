@@ -10,9 +10,9 @@ public class Player : MonoBehaviour
 
     private Vector3 direction;
 
-    private float gravity = -22f;
+    private float gravity = -25f;
 
-    private float strength = 5f;
+    private float strength = 8f;
 
     public static int scoreSeed = 0;
 

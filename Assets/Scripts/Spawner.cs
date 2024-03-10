@@ -99,8 +99,13 @@ public class Spawner : MonoBehaviour
     {
         GameObject coins = Instantiate(coin, transform.position, Quaternion.identity);
 
-        coins.transform.position += Vector3.up * Random.Range(minHeight, maxHeight);
-        coins.transform.localPosition += Vector3.up * Random.Range(-2.5f, 3f);
+         coins.transform.position += Vector3.up * Random.Range(minHeight, maxHeight);
+
+        if (randomSpawning)
+        {
+         coins.transform.localPosition += Vector3.up * Random.Range(-2.5f, 3f);
+        }
+
     }
 
     private void SpawnSeeds()
