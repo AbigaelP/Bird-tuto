@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -7040289099831692861}
   - component: {fileID: -4671820966109590474}
   m_Layer: 0
-  m_Name: Coin
+  m_Name: Coin 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,12 +75,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: be367474aa9fbe5409a5d69adcd63d74, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bcb0fbabb28e0b644bacc2454e8b1d50, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.2, y: 0.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1881f156c2211bf45855c132706045b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinAudio: {fileID: 8300000, guid: af08711d04496f042aa9288917873367, type: 3}
+  coinAudio: {fileID: 8300000, guid: 383379fdf342006478f44c5fb2e52934, type: 3}
 --- !u!58 &-4671820966109590474
 CircleCollider2D:
   m_ObjectHideFlags: 0
