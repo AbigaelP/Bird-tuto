@@ -17,9 +17,11 @@ public class Coins : MonoBehaviour
 		{
 			case 3:
 			case 6:
+			case 7:
 				speed = 10f;
 				break;
 			case 4:
+			case 8:
 				speed = 1f;
 				break;
 		}
@@ -31,7 +33,7 @@ public class Coins : MonoBehaviour
 	}
 
 	public static void InitScore() { // permet d'initialiser par défaut le nombre de pièces ou bien de récupérer le nombre de pièce sauvegardé
-		score = 1000;
+		score = 200;
 		if(PlayerPrefs.HasKey("COINS")) {
 			score = PlayerPrefs.GetInt("COINS");
 		}
