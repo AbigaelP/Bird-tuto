@@ -85,7 +85,7 @@ public class Spawner : MonoBehaviour
 
 		
 		GameObject pipes = Instantiate(pipe, transform.position, Quaternion.identity);
-		float moveTop =  Random.Range(4.5f, 7.5f); // récupérer de combier sera déplacement le tuyau du haut
+		float moveTop =  Random.Range(5f, 7f); // récupérer de combier sera déplacement le tuyau du haut
 		float moveBottom =  Random.Range(3f, 5f); // récupérer de combier sera déplacement le tuyau du bas
 		pipes.transform.position += Vector3.up * Random.Range(minHeight, maxHeight);
 		
