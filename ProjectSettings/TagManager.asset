@@ -6,8 +6,9 @@ TagManager:
   tags:
   - Obstacle
   - Scoring
-  - Coin
   - Seed
+  - BabyBird
+  - EnemyBird
   layers:
   - Default
   - TransparentFX

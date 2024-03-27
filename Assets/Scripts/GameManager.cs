@@ -3,10 +3,6 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-
-    //Tu en es capable Abby <3
-    // Je crois en mon Altesse <3
-    // Je suis présent pour aider au mieux :dab:
     public Player player; // objet du joueur
 
     //score global

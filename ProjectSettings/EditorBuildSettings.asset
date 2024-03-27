@@ -6,12 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Abby.unity
+    guid: 96428d2c5707fa84eb4c833cc528a406
+  - enabled: 0
+    path: Assets/Scenes/Settings.unity
+    guid: bbf949f1461560b44b8f6dfee4cf51d1
+  - enabled: 0
+    path: Assets/Scenes/Shop.unity
+    guid: 36ad2728dc0c8b44eb8396dad58550e9
+  - enabled: 0
     path: Assets/Scenes/TEST.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/Setting.unity
-    guid: 246e7d3701b7e2b479c9b8640085283b
-  - enabled: 1
-    path: Assets/Scenes/bby.unity
-    guid: 96428d2c5707fa84eb4c833cc528a406
   m_configObjects: {}
