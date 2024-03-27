@@ -32,12 +32,12 @@ public class Spawner : MonoBehaviour
 		spawnEnemyBird = false;
 		spawnCat = false;
 		minimumPipeSpawn = 1f;
-		maximumPipeSpawn = 3f;
+		maximumPipeSpawn = 2f;
 		coinSpawnEveryPipe = true;
 		switch (FindObjectOfType<GameManager>().DifficultyLevel)
 		{
 			case 2:
-				maximumPipeSpawn = 2f;
+                maximumPipeSpawn = 1f;
 				coinSpawnEveryPipe = false;
 				break;
 			case 5:
@@ -53,7 +53,9 @@ public class Spawner : MonoBehaviour
 			case 9:
 				spawnEnemyBird = true;
 				spawnCat = true;
-				break;
+				maximumPipeSpawn = 3f;
+
+                break;
 		}
 	}
 
@@ -83,7 +85,7 @@ public class Spawner : MonoBehaviour
 
 		
 		GameObject pipes = Instantiate(pipe, transform.position, Quaternion.identity);
-		float moveTop =  Random.Range(5f, 7f); // récupérer de combier sera déplacement le tuyau du haut
+		float moveTop =  Random.Range(4.5f, 7.5f); // récupérer de combier sera déplacement le tuyau du haut
 		float moveBottom =  Random.Range(3f, 5f); // récupérer de combier sera déplacement le tuyau du bas
 		pipes.transform.position += Vector3.up * Random.Range(minHeight, maxHeight);
 		
