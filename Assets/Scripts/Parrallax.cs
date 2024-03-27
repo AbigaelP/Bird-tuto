@@ -12,7 +12,7 @@ public class Parrallax : MonoBehaviour
 
     private void Update()
     {
-        meshRenderer.material.mainTextureOffset += new Vector2(animationSpeed * Time.deltaTime, 0); // permet de gérer le déplacement du background
+        meshRenderer.material.mainTextureOffset += new Vector2(animationSpeed * Time.deltaTime, 0); // permet de gÃ©rer le dÃ©placement du background
     }
 
 

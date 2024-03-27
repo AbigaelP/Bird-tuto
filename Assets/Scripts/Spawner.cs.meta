@@ -3,7 +3,11 @@ guid: 374f7314a96d6a04d91aa0f1f644322b
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - pipe: {instanceID: 0}
+  - coin: {instanceID: 0}
+  - seed: {instanceID: 0}
+  - enemyBird: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
